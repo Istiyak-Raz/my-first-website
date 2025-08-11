@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Unlocked</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">Cryptography Unlocked</div>
+            <ul class="nav-links">
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark and light mode">
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.836 17.836a.75.75 0 01-1.06 0l-1.59-1.591a.75.75 0 111.06-1.06l1.591 1.59a.75.75 0 010 1.061zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.164 17.836a.75.75 0 010-1.06l1.59-1.591a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 6.106a.75.75 0 011.06 0l1.591 1.59a.75.75 0 01-1.06 1.06l-1.59-1.591a.75.75 0 010-1.06z"/></svg>
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.472-.69a.75.75 0 01.82.162a.75.75 0 01-.286.948A10.483 10.483 0 0118 16.5a10.5 10.5 0 01-10.5-10.5c0-1.01.143-1.986.405-2.902a.75.75 0 01.948-.286z" clip-rule="evenodd"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section fade-in">
+            <div class="container">
+                <h1 class="hero-title">Unlock the Secrets of Secure Communication</h1>
+                <p class="hero-subtitle">A comprehensive, interactive guide to the world of cryptography. From ancient ciphers to the quantum frontier.</p>
+                <div id="hero-animation">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <a href="#fundamentals" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <section id="fundamentals" class="static-section">
+            <div class="container">
+                <h2 class="section-title">Fundamentals of Cryptography</h2>
+                <div class="static-content">
+                    <p><strong>What is Cryptography?</strong><br>Cryptography is the science of using mathematics to encrypt and decrypt data. It is the art of secure communication, enabling two parties to exchange messages that are unreadable by any unauthorized third party. At its core, cryptography is about transforming readable data (plaintext) into an unreadable format (ciphertext) and back again. This transformation is governed by a set of rules called an algorithm and a secret piece of information called a key.</p>
+                    
+                    <p><strong>A Brief History: From Caesar to Computers</strong><br>The need for secret communication is as old as writing itself. One of the earliest known examples is the <strong>Caesar Cipher</strong>, used by Julius Caesar. He would shift each letter of a message by a fixed number of places (e.g., A becomes D, B becomes E). This is a simple substitution cipher and is easily broken by frequency analysis.</p>
+                    <p>For centuries, cryptography evolved slowly, with devices like the Enigma machine in WWII representing the peak of mechanical encryption. The true revolution came with the advent of computers and the formalization of mathematical principles for cryptography in the 20th century.</p>
+
+                    <p><strong>Classical vs. Modern Cryptography</strong><br>
+                        <ul>
+                            <li><strong>Classical Cryptography:</strong> This refers to pre-computer techniques. They are typically pen-and-paper methods or mechanical devices. They operate on alphabets and include substitution ciphers (like Caesar) and transposition ciphers (rearranging letters). They are now considered insecure.
+                            </li>
+                            <li><strong>Modern Cryptography:</strong> This is the cryptography we use today. It is heavily based on advanced mathematical theory and computer science. It operates on binary data (bits and bytes) and is categorized mainly into Symmetric and Asymmetric cryptography. Its security relies on the computational difficulty of solving certain mathematical problems.</li>
+                        </ul>
+                    </p>
+
+                    <p><strong>The Four Pillars: Core Cryptographic Goals</strong><br>Modern cryptography provides a robust framework for securing information, built upon four fundamental goals:</p>
+                    <ul>
+                        <li><strong>Confidentiality:</strong> This is the most well-known goal. It ensures that data is kept secret and private. Only the intended recipient can read the message. This is achieved through encryption. If an attacker intercepts the message, they only see unintelligible ciphertext.</li>
+                        <li><strong>Integrity:</strong> This ensures that data has not been altered or tampered with in transit. When a message is received, the recipient can verify that it is the same as the one that was sent. This is often achieved using hash functions.</li>
+                        <li><strong>Authentication:</strong> This verifies the identity of the sender and receiver. It answers the question, "Are you really who you say you are?" Authentication is crucial for preventing impersonation in digital communications.</li>
+                        <li><strong>Non-repudiation:</strong> This prevents the sender of a message from later denying that they sent it. It provides proof of origin. Digital signatures are a key technology for achieving non-repudiation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="topics">
+            <div class="container">
+                <h2 class="section-title">Further Concepts</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            2. Types of Cryptography
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Modern cryptography is broadly divided into two main categories based on how the keys are used. Understanding this distinction is fundamental to understanding how modern secure systems are built.</p>
+                            
+                            <p><strong>Symmetric Key Cryptography (Private Key Cryptography)</strong><br>
+                            In symmetric cryptography, a single, shared secret key is used for both the encryption and decryption of data. Think of it like a physical lock and key: anyone who has a copy of the key can both lock and unlock the box. For two parties to communicate securely, they must both have a copy of the same secret key, and this key must be kept confidential from everyone else.</p>
+                            <ul>
+                                <li><strong>How it works:</strong> Sender encrypts the plaintext with the shared secret key. The resulting ciphertext is sent to the receiver. The receiver uses the exact same secret key to decrypt the ciphertext and retrieve the original plaintext.</li>
+                                <li><strong>Strength:</strong> Symmetric algorithms are extremely fast and efficient, making them ideal for encrypting large volumes of data, such as entire files, databases, or streaming video.</li>
+                                <li><strong>Weakness:</strong> The primary challenge is <strong>key distribution</strong>. How do you securely share the secret key with the other party in the first place? If you send it over an insecure channel, an attacker could intercept it.</li>
+                                <li><strong>Examples:</strong>
+                                    <ul>
+                                        <li><strong>AES (Advanced Encryption Standard):</strong> The current global standard for symmetric encryption. Used by governments and corporations worldwide to protect sensitive data. It is a block cipher, operating on 128-bit blocks of data.</li>
+                                        <li><strong>DES (Data Encryption Standard):</strong> An older standard, now considered insecure due to its small 56-bit key size, which is vulnerable to brute-force attacks. <strong>3DES (Triple DES)</strong> is a more secure variant but is much slower than AES.</li>
+                                        <li><strong>Blowfish / Twofish:</strong> Other strong and respected symmetric ciphers. Twofish was a finalist in the AES competition.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p><strong>Asymmetric Key Cryptography (Public Key Cryptography)</strong><br>
+                            Asymmetric cryptography solves the key distribution problem by using a pair of mathematically related keys for each user: a <strong>public key</strong> and a <strong>private key</strong>.</p>
+                            <ul>
+                                <li><strong>Public Key:</strong> This key can be shared freely with anyone. It is used to encrypt data.</li>
+                                <li><strong>Private Key:</strong> This key must be kept secret by the owner. It is used to decrypt data that has been encrypted with the corresponding public key.</li>
+                                <li><strong>How it works:</strong> If Alice wants to send a secure message to Bob, she finds Bob's public key (which is publicly available) and uses it to encrypt her message. The resulting ciphertext can <em>only</em> be decrypted by Bob's private key, which only he possesses. Even Alice cannot decrypt the message she just sent.</li>
+                                <li><strong>Strength:</strong> It elegantly solves the key distribution problem. It is also the foundation for digital signatures, which provide authentication and non-repudiation.</li>
+                                <li><strong>Weakness:</strong> Asymmetric algorithms are computationally intensive and much slower than symmetric algorithms. Therefore, they are not suitable for encrypting large amounts of data.</li>
+                                <li><strong>Hybrid Approach:</strong> In practice, most systems (like HTTPS/TLS) use a hybrid approach. They use an asymmetric algorithm to securely exchange a temporary symmetric key. Then, they use that fast symmetric key to encrypt the bulk of the communication data.</li>
+                                <li><strong>Examples:</strong>
+                                    <ul>
+                                        <li><strong>RSA (Rivest-Shamir-Adleman):</strong> One of the first and most widely used asymmetric algorithms. Its security is based on the difficulty of factoring large prime numbers.</li>
+                                        <li><strong>ECC (Elliptic Curve Cryptography):</strong> A more modern approach that provides the same level of security as RSA but with much smaller key sizes, making it more efficient for mobile devices and systems with limited resources.</li>
+                                        <li><strong>Diffie-Hellman Key Exchange:</strong> A protocol that allows two parties to establish a shared secret key over an insecure channel without ever sending the key itself. It is a foundational part of many secure communication protocols.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            3. Hash Functions
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A hash function is a mathematical algorithm that takes an input of any size and produces a fixed-size string of characters, which is called the hash value or digest. Unlike encryption, hashing is a one-way process. You cannot reverse a hash to get the original input. This one-way property is what makes hash functions so useful in cryptography.</p>
+                            
+                            <p><strong>Core Properties of a Cryptographic Hash Function:</strong></p>
+                            <ul>
+                                <li><strong>Deterministic:</strong> The same input will always produce the same output. Hashing "hello" will result in the same hash value every single time.</li>
+                                <li><strong>Fixed-Size Output:</strong> No matter how large or small the input is (a single letter or an entire movie), the output hash will always be the same length (e.g., 256 bits for SHA-256).</li>
+                                <li><strong>Pre-image Resistance (One-Way):</strong> It should be computationally infeasible to find the original input (the "pre-image") given only the output hash. This is the "one-way" property.</li>
+                                <li><strong>Second Pre-image Resistance (Collision Resistance):</strong> Given an input, it should be computationally infeasible to find a <em>different</em> input that produces the same hash value.</li>
+                                <li><strong>Avalanche Effect:</strong> A tiny change in the input (e.g., changing one character) should produce a drastically different output hash. This ensures that similar inputs do not result in similar hashes.</li>
+                            </ul>
+
+                            <p><strong>Common Hash Algorithms:</strong></p>
+                            <ul>
+                                <li><code>MD5</code>: An old hash function that produces a 128-bit hash. It is <strong>no longer considered secure</strong> as it is vulnerable to collision attacks. It should only be used for non-security purposes like file checksums.</li>
+                                <li><code>SHA-1</code>: Produces a 160-bit hash. Like MD5, SHA-1 is also <strong>considered insecure</strong> and has been phased out of most security applications.</li>
+                                <li><code>SHA-256</code> & <code>SHA-3</code>: Part of the SHA-2 and SHA-3 families, respectively. These are the current standards for secure hashing. SHA-256, which produces a 256-bit hash, is extremely common and is used extensively in protocols like TLS, SSL, and in blockchain technology like Bitcoin.</li>
+                            </ul>
+
+                            <p><strong>Key Applications:</strong></p>
+                            <ul>
+                                <li><strong>Password Hashing:</strong> Storing user passwords directly is a massive security risk. Instead, systems store the hash of a password. When a user logs in, the system hashes the entered password and compares it to the stored hash. To make this even more secure, a random value called a "salt" is added to the password before hashing, which prevents attackers from using pre-computed tables of common password hashes (rainbow tables).</li>
+                                <li><strong>Data Integrity and Digital Signatures:</strong> Hashing is crucial for ensuring data hasn't been tampered with. To create a digital signature, a user first hashes the message they want to send, and then encrypts that hash with their private key. Someone else can then verify the signature using the sender's public key. This is much more efficient than encrypting the entire message.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            4. Digital Signatures
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A digital signature is the electronic equivalent of a handwritten signature, but with far more security. It is a mathematical scheme used to verify the authenticity and integrity of a digital message or document. When you sign a document digitally, you are providing proof that you are the one who sent it and that the document has not been altered since you signed it.</p>
+
+                            <p><strong>How Do Digital Signatures Work?</strong><br>
+                            Digital signatures are a core application of asymmetric cryptography. The process involves both hashing and public-key encryption.</p>
+                            <ol>
+                                <li><strong>Hashing the Message:</strong> First, the sender takes the message they want to sign and creates a hash of it using a secure hash function (like SHA-256). This creates a fixed-size, unique digest of the message.</li>
+                                <li><strong>Signing the Hash:</strong> The sender then uses their <strong>private key</strong> to encrypt this hash. The encrypted hash is the digital signature.</li>
+                                <li><strong>Attaching the Signature:</strong> The digital signature is attached to the original message. The message itself is not encrypted, only the hash.</li>
+                            </ol>
+
+                            <p><strong>Verification Process:</strong></p>
+                            <ol>
+                                <li><strong>Separate the Message and Signature:</strong> The receiver separates the digital signature from the message.</li>
+                                <li><strong>Decrypt the Signature:</strong> The receiver uses the sender's <strong>public key</strong> to decrypt the signature. This reveals the original hash (Hash A).</li>
+                                <li><strong>Hash the Received Message:</strong> The receiver independently computes the hash of the received message using the same hash function (Hash B).</li>
+                                <li><strong>Compare the Hashes:</strong> If Hash A and Hash B are identical, the signature is valid.</li>
+                            </ol>
+
+                            <p><strong>What Does a Valid Signature Prove?</strong></p>
+                            <ul>
+                                <li><strong>Authenticity:</strong> Because only the sender has the private key needed to create the signature, a valid signature proves it came from them.</li>
+                                <li><strong>Integrity:</strong> If the message was altered in any way, the hash computed by the receiver (Hash B) would not match the hash from the signature (Hash A).</li>
+                                <li><strong>Non-repudiation:</strong> Since only the sender could have created the signature, they cannot later deny having sent the message.</li>
+                            </ul>
+
+                            <p><strong>Common Digital Signature Algorithms:</strong></p>
+                            <ul>
+                                <li><strong>RSA Digital Signature:</strong> Uses the RSA algorithm to sign and verify. It is widely used in many digital security standards.</li>
+                                <li><strong>ECDSA (Elliptic Curve Digital Signature Algorithm):</strong> The elliptic curve-based version of the Digital Signature Algorithm. It provides the same level of security as RSA but with smaller key and signature sizes, making it highly efficient. It is the signature algorithm used in Bitcoin and Ethereum.</li>
+                            </ul>
+
+                            <p><strong>Applications:</strong> Digital signatures are everywhere, from securing software updates and financial transactions to being the core mechanism that validates transactions in nearly every blockchain network.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            5. Encryption Modes
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Symmetric ciphers like AES are <strong>block ciphers</strong>, meaning they encrypt data in fixed-size chunks or blocks (e.g., 128 bits for AES). But what if you need to encrypt a message that is much larger than a single block? A <strong>mode of operation</strong> is an algorithm that specifies how to repeatedly apply a block cipher's single-block operation to securely encrypt larger amounts of data.</p>
+                            <p>The choice of mode is critical, as insecure modes can undermine an otherwise strong cipher.</p>
+
+                            <p><strong>Common (and Insecure) Modes:</strong></p>
+                            <ul>
+                                <li><strong>ECB (Electronic Codebook):</strong> This is the simplest mode. Each block of plaintext is encrypted independently with the same key. <strong>This mode is highly insecure and should not be used.</strong> Because identical plaintext blocks produce identical ciphertext blocks, it does not hide data patterns. For example, an image encrypted with ECB will still show the outline of the original image.</li>
+                            </ul>
+
+                            <p><strong>Secure Modes of Operation:</strong></p>
+                            <ul>
+                                <li><strong>CBC (Cipher Block Chaining):</strong> In CBC, each block of plaintext is XORed with the previous ciphertext block before being encrypted. This creates a dependency, or "chain," where the encryption of each block depends on all the previous blocks. To start the process, an unpredictable <strong>Initialization Vector (IV)</strong> is used for the first block. CBC is a widely used and secure mode, but it is not parallelizable for encryption.</li>
+                                <li><strong>CFB (Cipher Feedback) & OFB (Output Feedback):</strong> These modes allow a block cipher to be used as a stream cipher, encrypting smaller units of data (like a single byte) at a time instead of full blocks.</li>
+                                <li><strong>CTR (Counter Mode):</strong> CTR also turns a block cipher into a stream cipher. It encrypts an incrementing counter and then XORs the result with the plaintext to produce the ciphertext. It is highly parallelizable for both encryption and decryption, making it very fast and efficient.</li>
+                            </ul>
+
+                            <p><strong>Authenticated Encryption (AEAD):</strong></p>
+                            <p>Standard modes like CBC provide confidentiality, but they do not protect against an attacker who modifies the ciphertext in transit. <strong>Authenticated Encryption with Associated Data (AEAD)</strong> modes solve this by combining both encryption and authentication into a single step. They provide confidentiality, integrity, and authenticity simultaneously.</p>
+                            <ul>
+                                <li><strong>GCM (Galois/Counter Mode):</strong> This is the most popular AEAD mode. It combines the speed and parallelizability of CTR mode with a secure message authentication code (MAC). GCM is fast, efficient, and widely considered the gold standard for symmetric encryption in modern applications, including TLS 1.3.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            6. Key Management
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The strongest cryptographic algorithm is useless if the keys are not managed properly. Key management is the set of processes and protocols for handling cryptographic keys throughout their entire lifecycle, from creation to destruction.</p>
+
+                            <p><strong>The Key Lifecycle:</strong></p>
+                            <ol>
+                                <li><strong>Key Generation:</strong> Keys must be generated using a secure source of randomness. Using predictable or biased sources can make even the strongest algorithm trivial to break.</li>
+                                <li><strong>Key Distribution & Exchange:</strong> This is the process of getting keys to the parties who need them. For symmetric keys, this is a major challenge. For asymmetric keys, this involves sharing public keys. Protocols like Diffie-Hellman (DH) and Elliptic Curve Diffie-Hellman (ECDH) allow for secure key exchange over insecure channels.</li>
+                                <li><strong>Key Storage:</strong> Keys must be stored securely to prevent unauthorized access. This can involve hardware security modules (HSMs) or secure software key vaults.</li>
+                                <li><strong>Key Usage:</strong> Policies should define how keys are used (e.g., a key for signing should not be used for encryption).</li>
+                                <li><strong>Key Rotation & Revocation:</strong> Keys should be retired and replaced on a regular schedule (rotation). If a key is compromised, there must be a way to revoke it and notify others not to trust it anymore.</li>
+                            </ol>
+
+                            <p><strong>Public Key Infrastructure (PKI)</strong></p>
+                            <p>How do you trust that a public key actually belongs to the person or organization you think it does? An attacker could try to substitute their own public key for a legitimate one in a Man-in-the-Middle attack. PKI solves this problem of trust and authentication.</p>
+                            <p>PKI is a system of hardware, software, policies, and procedures used to create, manage, distribute, use, store, and revoke digital certificates.</p>
+                            <ul>
+                                <li><strong>Digital Certificate:</strong> A digital certificate is like a digital passport. It is a data file that binds a public key to a specific identity (like a person or a website).</li>
+                                <li><strong>Certificate Authority (CA):</strong> A CA is a trusted third party that issues these digital certificates. When a CA issues a certificate, it is digitally signing it with its own private key, effectively vouching for the fact that the public key in the certificate belongs to the specified identity. Examples of major CAs include Let's Encrypt, DigiCert, and GlobalSign.</li>
+                                <li><strong>Chain of Trust:</strong> Your browser and operating system come with a pre-installed list of trusted root CAs. When you visit a website with HTTPS, the website presents a certificate signed by a CA. Your browser checks if it can trace the signature back to one of the trusted root CAs in its list. This is known as the chain of trust.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            7. Authentication Protocols
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Authentication protocols are designed to verify the identity of a user, device, or system. They are the gatekeepers of secure systems, ensuring that only authorized entities can gain access.</p>
+
+                            <p><strong>HMAC (Hash-based Message Authentication Code)</strong></p>
+                            <p>An HMAC is a type of message authentication code (MAC) that is calculated using a cryptographic hash function in combination with a secret key. It provides both data integrity and authenticity. Unlike a simple hash, an attacker cannot generate a valid HMAC without knowing the secret key.</p>
+                            <ul>
+                                <li><strong>How it works:</strong> The message and the secret key are combined and hashed in a specific way. The resulting HMAC is sent along with the message. The receiver, who also has the secret key, can compute their own HMAC and verify that it matches the one received.</li>
+                                <li><strong>Use Case:</strong> HMACs are very common in web applications, such as in JSON Web Tokens (JWTs), to ensure that the token has not been tampered with.</li>
+                            </ul>
+
+                            <p><strong>Challenge-Response Protocols</strong></p>
+                            <p>In a challenge-response protocol, one party presents a question (the "challenge"), and the other party must provide a valid answer (the "response") to be authenticated. This prevents replay attacks, where an attacker simply re-sends previously captured authentication data.</p>
+                            <ul>
+                                <li><strong>Example:</strong> The server sends a random, one-time-use string (the challenge) to the client. The client uses its secret key to encrypt or sign the challenge and sends it back as the response. The server can then verify the response using its own knowledge of the secret.</li>
+                            </ul>
+
+                            <p><strong>Multi-Factor Authentication (MFA)</strong></p>
+                            <p>MFA dramatically increases security by requiring a user to provide two or more different types of evidence to prove their identity. The factors are typically categorized as:</p>
+                            <ul>
+                                <li><strong>Something you know:</strong> A password or PIN.</li>
+                                <li><strong>Something you have:</strong> A physical device like a smartphone or a hardware token.</li>
+                                <li><strong>Something you are:</strong> A biometric like a fingerprint or facial scan.</li>
+                            </ul>
+                            <p><strong>OTP (One-Time Password) & TOTP (Time-based One-Time Password)</strong> are common technologies for the "something you have" factor. An app like Google Authenticator generates a code that is valid for only a short period (usually 30-60 seconds). This code is derived from a shared secret and the current time.</p>
+
+                            <p><strong>Kerberos</strong></p>
+                            <p>Kerberos is a network authentication protocol designed to provide strong authentication for client/server applications by using secret-key cryptography. It is the default authentication technology used by Microsoft Windows. It uses a trusted third party, called the Key Distribution Center (KDC), to manage "tickets" that are used to prove identity without sending passwords over the network.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            8. Cryptanalysis
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Cryptanalysis is the study of analyzing and breaking cryptographic systems. It is the other side of the coin to cryptography. Cryptanalysts, or attackers, look for weaknesses in algorithms, protocols, or their implementations to bypass security and gain access to plaintext.</p>
+
+                            <p><strong>Common Attack Vectors:</strong></p>
+                            <ul>
+                                <li><strong>Brute-Force Attack:</strong> This is the most straightforward attack. The attacker tries every possible key until the correct one is found. The defense against this is to use a sufficiently large key space (e.g., 256-bit keys for AES), which makes a brute-force attack computationally impossible with current technology.</li>
+                                <li><strong>Frequency Analysis:</strong> A classic technique used to break simple substitution ciphers. It relies on the fact that certain letters and words appear more frequently in a given language (e.g., 'E' is the most common letter in English). Modern ciphers that operate on binary data are not vulnerable to this simple form of analysis.</li>
+                                <li><strong>Man-in-the-Middle (MitM) Attack:</strong> An attacker secretly positions themself between two communicating parties, intercepting their messages and relaying them. The parties believe they are communicating directly with each other, but are in fact talking to the attacker. This can be used to steal or alter information. Public Key Infrastructure (PKI) and digital certificates are the primary defense against MitM attacks.</li>
+                            </ul>
+
+                            <p><strong>Advanced Attacks:</strong></p>
+                            <ul>
+                                <li><strong>Side-Channel Attacks:</strong> These attacks do not target weaknesses in the cryptographic algorithm itself, but rather in its implementation. The attacker analyzes physical information from the device performing the cryptography, such as its power consumption, electromagnetic leaks, or timing information, to deduce the secret key.</li>
+                                <li><strong>Padding Oracle Attack:</strong> This is a powerful attack that can be used against systems that use CBC mode encryption. If an application leaks information about whether the padding of a decrypted message is correct or not (the "oracle"), an attacker can use this information to decrypt the entire ciphertext block by block without knowing the key. This highlights the importance of using authenticated encryption (AEAD) modes like GCM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            9. Blockchain & Cryptography
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Blockchain technology, which powers cryptocurrencies like Bitcoin and Ethereum, would be impossible without cryptography. Cryptography provides the fundamental tools that ensure the security, integrity, and functionality of a decentralized ledger.</p>
+
+                            <p><strong>Core Cryptographic Components in Blockchain:</strong></p>
+                            <ul>
+                                <li><strong>Cryptographic Hashing:</strong> Hashing is the backbone of a blockchain. Each block in the chain contains a hash of the previous block's header, creating an immutable, interlocking chain. If an attacker tries to alter a previous block, its hash will change, which would invalidate all subsequent blocks. This is what makes a blockchain tamper-evident. Hashing (specifically SHA-256 in Bitcoin) is also used in the mining process (Proof-of-Work).</li>
+                                <li><strong>Public/Private Keys:</strong> Every user on a blockchain has a public/private key pair. Their public key is used to derive their wallet address, which is where they can receive funds. Their private key is the secret key used to authorize transactions. A user creates a digital signature with their private key to send funds, proving they own the assets in that wallet. <strong>Losing your private key means losing access to your funds forever.</strong></li>
+                                <li><strong>Merkle Trees:</strong> Instead of hashing every single transaction and including them all in the block header, blockchains use a more efficient structure called a Merkle Tree. All transactions in a block are hashed, then those hashes are paired and hashed, and so on, until a single root hash (the Merkle Root) is produced. This root is what gets included in the block header. It allows for efficient verification of transactions; a user can prove a transaction is in a block without having to download the entire block.</li>
+                            </ul>
+
+                            <p><strong>Advanced Cryptography in Blockchain:</strong></p>
+                            <ul>
+                                <li><strong>Zero-Knowledge Proofs (ZKPs):</strong> This is a cutting-edge cryptographic method where one party (the prover) can prove to another party (the verifier) that they know a value, without revealing any information apart from the fact that they know the value. In blockchain, this can be used for privacy. For example, a ZKP could be used to prove that you have sufficient funds for a transaction without revealing your total account balance. ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge) are a popular type of ZKP.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            10. Post-Quantum Cryptography
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The security of most modern asymmetric cryptography (like RSA and ECC) relies on the fact that it is computationally very difficult for classical computers to solve certain mathematical problems, like factoring large numbers or computing discrete logarithms.</p>
+                            
+                            <p><strong>The Quantum Threat</strong><br>
+A sufficiently powerful quantum computer, however, could solve these problems with ease. In 1994, Peter Shor developed <strong>Shor's Algorithm</strong>, which can efficiently factor large numbers on a quantum computer. This means that once a large-scale quantum computer is built, it will be able to break RSA and ECC, rendering much of our current public-key infrastructure insecure.</p>
+
+                            <p><strong>What is Post-Quantum Cryptography (PQC)?</strong><br>
+                            Post-Quantum Cryptography (also known as quantum-resistant cryptography) refers to the development of new cryptographic algorithms that are secure against attacks from both classical and quantum computers. The goal is to research and standardize a new set of public-key algorithms before a cryptographically relevant quantum computer is a reality.</p>
+
+                            <p><strong>Approaches to PQC:</strong><br>
+                            Researchers are exploring several different families of mathematical problems that are believed to be difficult for both classical and quantum computers to solve:</p>
+                            <ul>
+                                <li><strong>Lattice-based Cryptography:</strong> This is currently one of the most promising areas. It is based on the difficulty of solving problems related to geometric structures called lattices.</li>
+                                <li><strong>Code-based Cryptography:</strong> Based on the difficulty of decoding a random linear code.</li>
+                                <li><strong>Multivariate Cryptography:</strong> Based on the difficulty of solving systems of multivariate polynomial equations.</li>
+                                <li><strong>Hash-based Signatures:</strong> These use hash functions to build secure digital signature schemes.</li>
+                            </ul>
+
+                            <p><strong>The NIST PQC Standardization Process</strong><br>
+The U.S. National Institute of Standards and Technology (NIST) is running a multi-year public competition to select and standardize one or more PQC algorithms. They have been running a process with multiple rounds, and have recently selected the first set of algorithms to be standardized, including CRYSTALS-Kyber (for key exchange) and CRYSTALS-Dilithium (for digital signatures), both of which are lattice-based.</p>
+                            <p>The transition to PQC will be a massive global undertaking, requiring updates to software, hardware, and protocols across the entire digital landscape.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="container">
+                <h2 class="section-title">Interactive Tools</h2>
+
+                <div class="tool-guide">
+                    <h3>How to Use These Tools</h3>
+                    <p>These tools are designed to provide a hands-on demonstration of the cryptographic concepts discussed above. Here’s how to get started:</p>
+                    <ul>
+                        <li><strong>Hash Generator:</strong> Enter any text to see how it is converted into a fixed-length hash. Notice how even a small change in the input creates a completely different hash (the avalanche effect).</li>
+                        <li><strong>Text Encryptor/Decryptor:</strong>
+                            <ul>
+                                <li><strong>AES (Symmetric):</strong> Type your text and a secret password. Click Encrypt. To decrypt, you must use the exact same text and password.</li>
+                                <li><strong>RSA (Asymmetric):</strong> First, click to generate a new RSA key pair. You can then use the public key to encrypt a message. Only the corresponding private key can decrypt it.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Digital Signature Demo:</strong> Generate a key pair. Type a message and sign it with the private key. You can then verify that the signature is valid for that specific message using the public key. Try changing the message after signing to see the verification fail.</li>
+                        <li><strong>Key Exchange Visualizer:</strong> Click the buttons in order to see a simplified demonstration of how two parties (Alice and Bob) can arrive at the same shared secret without ever sending it directly.</li>
+                        <li><strong>QR Code Generator:</strong> Enter any text or URL and instantly generate a scannable QR code.</li>
+                    </ul>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h4>Hash Generator (MD5, SHA-256)</h4>
+                        <p class="tool-description">Creates a unique, fixed-length fingerprint of your text. Used for data integrity checks and password storage.</p>
+                        <textarea id="hash-input" placeholder="Enter text here..."></textarea>
+                        <select id="hash-algo">
+                            <option value="SHA-256">SHA-256</option>
+                            <option value="MD5">MD5 (for educational purposes)</option>
+                        </select>
+                        <button id="generate-hash-btn">Generate Hash</button>
+                        <pre><code id="hash-output"></code></pre>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Text Encryptor/Decryptor</h4>
+                        <p class="tool-description">Encrypt and decrypt messages using both symmetric (AES) and asymmetric (RSA) algorithms.</p>
+                        <select id="encryptor-algo">
+                            <option value="AES-GCM">AES-GCM</option>
+                            <option value="RSA-OAEP">RSA-OAEP</option>
+                        </select>
+
+                        <div id="aes-fields">
+                            <textarea id="aes-input" placeholder="Enter text for AES..."></textarea>
+                            <input type="password" id="aes-key" placeholder="Enter your secret key...">
+                        </div>
+
+                        <div id="rsa-fields" style="display: none;">
+                            <button id="generate-rsa-keys-btn">Generate RSA Key Pair</button>
+                            <textarea id="rsa-public-key" placeholder="Public Key will appear here..." readonly></textarea>
+                            <textarea id="rsa-private-key" placeholder="Private Key will appear here..." readonly></textarea>
+                            <textarea id="rsa-input" placeholder="Enter text for RSA..."></textarea>
+                        </div>
+
+                        <button id="encrypt-btn">Encrypt</button>
+                        <button id="decrypt-btn">Decrypt</button>
+                        <pre><code id="encryptor-output"></code></pre>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Digital Signature Demo (RSA-PSS)</h4>
+                        <p class="tool-description">Prove the authenticity and integrity of a message by signing it with a private key.</p>
+                        <button id="sig-generate-keys-btn">Generate New Keys</button>
+                        <textarea id="sig-public-key" placeholder="Public Key" readonly></textarea>
+                        <textarea id="sig-private-key" placeholder="Private Key" readonly></textarea>
+                        <textarea id="sig-input" placeholder="Enter message to sign..."></textarea>
+                        <button id="sig-sign-btn">Sign Message</button>
+                        <textarea id="sig-signature" placeholder="Signature will appear here..."></textarea>
+                        <button id="sig-verify-btn">Verify Signature</button>
+                        <pre><code id="sig-output"></code></pre>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Key Exchange Visualizer (Diffie-Hellman)</h4>
+                        <p class="tool-description">See how two parties can establish a shared secret over an insecure channel.</p>
+                        <div class="dh-container">
+                            <div class="dh-party">
+                                <h5>Alice</h5>
+                                <p>Private Number (a): <span id="alice-private"></span></p>
+                                <p>Public Value (g^a mod p): <span id="alice-public"></span></p>
+                                <p>Shared Secret: <span id="alice-secret"></span></p>
+                            </div>
+                            <div class="dh-party">
+                                <h5>Bob</h5>
+                                <p>Private Number (b): <span id="bob-private"></span></p>
+                                <p>Public Value (g^b mod p): <span id="bob-public"></span></p>
+                                <p>Shared Secret: <span id="bob-secret"></span></p>
+                            </div>
+                        </div>
+                        <div id="dh-visualization"></div>
+                        <button id="dh-generate-btn">1. Generate Public Parameters (p, g)</button>
+                        <button id="dh-exchange-btn">2. Perform Key Exchange</button>
+                        <pre><code id="dh-output"></code></pre>
+                    </div>
+                    <div class="tool-card">
+                        <h4>QR Code Generator</h4>
+                        <p class="tool-description">Encode any text or URL into a scannable QR code image.</p>
+                        <textarea id="qr-input" placeholder="Enter text to encode..."></textarea>
+                        <button id="qr-generate-btn">Generate QR Code</button>
+                        <div id="qr-code"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="container">
+                <h2 class="section-title">Resources & Further Learning</h2>
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h4>Online Tools</h4>
+                        <ul>
+                            <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> – The "Cyber Swiss Army Knife" for all kinds of cryptographic operations.</li>
+                            <li><a href="https://www.dcode.fr/en" target="_blank">dCode</a> – An excellent resource for breaking codes and analyzing ciphers.</li>
+                            <li><a href="https://www.ssllabs.com/ssltest/" target="_blank">SSL Labs Test</a> – Test the SSL/TLS configuration of your web server.</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>Security Tools</h4>
+                        <ul>
+                            <li><a href="https://www.wireshark.org/" target="_blank">Wireshark</a> – Analyze network traffic and see cryptography in action.</li>
+                            <li><a href="https://portswigger.net/burp" target="_blank">Burp Suite</a> – A powerful tool for pen-testing web applications, including those with crypto flaws.</li>
+                            <li><a href="https://www.metasploit.com/" target="_blank">Metasploit</a> – An exploitation framework that includes modules for cryptographic attacks.</li>
+                        </ul>
+                    </div>
+                     <div class="resource-category">
+                        <h4>Browser API</h4>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API" target="_blank">Web Crypto API</a> – The official MDN documentation for the Web Crypto API.</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>Cryptocurrency & Blockchain Tools</h4>
+                        <ul>
+                            <li><a href="https://metamask.io/" target="_blank">MetaMask</a> – A popular browser extension for interacting with the Ethereum blockchain.</li>
+                            <li><a href="https://geth.ethereum.org/" target="_blank">Geth</a> – The official command-line interface for running a full Ethereum node.</li>
+                            <li><a href="https://bitcoin.org/en/bitcoin-core/" target="_blank">Bitcoin Core</a> – The original Bitcoin client and a full node.</li>
+                            <li><a href="https://zk-snarks.org/" target="_blank">ZK-SNARKs</a> – Learn about Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Cryptography Unlocked. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="hash-generator.js"></script>
+    <script src="encryptor.js"></script>
+    <script src="signature.js"></script>
+    <script src="key-exchange.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="qr-generator.js"></script>
+</body>
+</html>
